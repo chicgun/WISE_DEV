@@ -50,7 +50,8 @@ public class HomeController {
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 		
 		String formattedDate = dateFormat.format(date);
-		logger.debug("test1111");
+		logger.debug("test ===============");
+		logger.debug("test ===============");
 		model.addAttribute("serverTime", formattedDate );
 
 		return "/sample/sample";
