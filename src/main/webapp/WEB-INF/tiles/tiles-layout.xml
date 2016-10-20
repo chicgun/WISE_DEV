@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+<tiles-definitions>   
+
+	<definition name="mainLayout"  template="/views/layout/mainLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/views/layout/common/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/views/layout/common/footer.jsp" />
+	</definition>      
+	 
+	 <!-- 컨트롤러에서 리턴해 주는 뷰이름,본예제는 hello  -->
+	<definition name="/views/*/*/*" extends="mainLayout">    
+		<put-attribute name="title" value="Secure Coding, MVC Hello world by Tiles 3 " />
+		<put-attribute name="body" value="/views/sample/{1}/{2}/{3}.jsp" />    
+	</definition>
+	
+	<definition name="user/*/*" extends="mainLayout">    
+		<put-attribute name="title" value="Secure Coding, MVC Hello world by Tiles 3" />
+		<put-attribute name="body" value="/views/sample/{1}/{2}.jsp" />    
+	</definition>  
+	 
+</tiles-definitions>
