@@ -1,0 +1,3 @@
+FROM jetty
+ADD ./target/WISE_DEV.war /var/lib/jetty/webapps/WISE_DEV.war
+EXPOSE 8080
