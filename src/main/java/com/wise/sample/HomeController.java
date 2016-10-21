@@ -51,6 +51,7 @@ public class HomeController {
 		
 		String formattedDate = dateFormat.format(date);
 		logger.debug("test ===============");
+		logger.debug("test ===============1212121212121");
 		logger.debug("test ===============11111111111111");
 		model.addAttribute("serverTime", formattedDate );
 
